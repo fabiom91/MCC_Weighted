@@ -6,9 +6,9 @@ from sklearn.preprocessing import LabelEncoder
 from scipy.sparse import csr_matrix
 
 weights = np.array([
-    [1,2,3],
-    [2,1,2],
-    [3,2,1]
+    [1,1,2],
+    [1,1,1],
+    [2,1,1]
 ])
 
 class Weighted_metrics():
