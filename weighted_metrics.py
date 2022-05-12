@@ -5,6 +5,12 @@ from sklearn.utils.multiclass import type_of_target
 from sklearn.preprocessing import LabelEncoder
 from scipy.sparse import csr_matrix
 
+weights = np.array([
+    [1,2,3],
+    [2,1,2],
+    [3,2,1]
+])
+
 class Weighted_metrics():
     ''' This class use a weighted confusion matrix by multiplying the confusion matrix by a
     matrix of weights given by the user.
@@ -23,7 +29,7 @@ class Weighted_metrics():
     ---------------------------------------------------------------------
     '''
     
-    def __init__(self,y_true,y_pred,weights):
+    def __init__(self,y_true,y_pred,weights=weights):
         self.weights = weights
         self.y_true = y_true
         self.y_pred = y_pred
